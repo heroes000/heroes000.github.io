@@ -1,0 +1,118 @@
+/* 720 -1400+ px */
+/*@media screen and (min-width: 1400px) {
+   .tabs_header {
+      position: absolute;
+      bottom: 50px;
+      width: 60%;
+   }
+   .tabs_header div {
+      
+   }
+   .top_header {
+      margin-top: 150px;
+   } 
+}
+
+/*==============================*/
+/* 1601 - 1920 px */
+@media screen and (max-width: 1920px) {
+
+}
+
+/* 1369 - 1600 px */
+@media screen and (max-width: 1600px) {
+
+}
+
+/* 961 - 1368 px */
+@media screen and (max-width: 1368px) {
+
+/*--- Тизеры ---*/
+  .s_tizers .row > div {  text-align: center; }
+  .tiz_descr { display: block; }
+  .s_tizers .row > div:nth-child(1) .icon { font-size: 60px; }
+  /*--- Конец Тизеров ---*/
+  
+}
+/* 769 - 960 px */
+@media screen and (max-width: 960px) {
+/*--- Тизеры ---*/  
+  .s_tizers .row > div { 
+    text-align: center; 
+  }
+  .tiz_descr { display: block; }
+  .s_tizers .row > div:nth-child(1) .icon { font-size: 60px; }
+/*--- Конец Тизеров ---*/
+
+/*- Section 2 s_profi -*/
+.profi_item:last-child {
+    margin-bottom: 35px;
+}
+/*- End Section 2 -*/
+    
+}
+
+/* 481 - 768 px */
+@media screen and (max-width: 768px) {
+  .top_phone, .logo, .top_header h1, .top_header h2 {
+    text-align: center;
+   }
+  .logo {
+    margin-bottom: 12px;
+  }  
+  .top_phone .tab_item {
+    font-size: 30px;
+  }
+/*-- End Header --*/
+
+/*- Section 2 s_profi -*/
+.profi_item {
+      width: 100%;
+      text-align: center;
+   }
+.pro_left img { width: 135px; }
+.pro_right h3 {
+    font-size: 42px;
+    font-weight: normal;
+}
+.pro_right p { font-size: 21px }
+/*- End Section 2 s_profi -*/   
+    
+}
+
+
+/* 320 - 480 px Extra Small, Phones */
+@media screen and (max-width: 480px) {
+ /*-- Header --*/   
+   .top_header {
+       margin-top: 30px;
+   }
+   .top_header h1 { 
+    font-size: 40px;
+    line-height: 40px;
+   }
+   .top_header h2 {
+    font-size: 26px;
+   }
+   .tabs_header .tabs .tab {
+    font-size: 12px;
+    padding: 15px 14px;
+   }
+   .button_wrap {
+    text-align: center;
+   }
+/*-- End Header ---*/
+
+/*-- Карта --*/
+   .s_contacts .tabs .tab {
+     padding: 0 20px;
+   }
+}
+
+/* Custom, iPhone Retin*/
+@media screen and (max-width: 320px) {
+   
+}
+
+
+

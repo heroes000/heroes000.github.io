@@ -1,0 +1,338 @@
+
+/* Font connection */
+
+@font-face {
+    font-family: 'Jaapokkisubtract';
+    src: url('../fonts/JaapokkisubtractRegular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/JaapokkisubtractRegular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/JaapokkisubtractRegular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('../fonts/JaapokkisubtractRegular.woff') format('woff'), /* Pretty Modern Browsers */
+    url('../fonts/JaapokkisubtractRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/JaapokkisubtractRegular#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+/* Specification */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #0001c5;
+    letter-spacing: 0.06em;
+}
+
+.container {
+    margin: 0 9%;
+    position: relative;
+   
+}
+
+.jpk-font {
+    font-family: Jaapokkisubtract, sans-serif;
+}
+
+.btn {
+    font-family: Jaapokkisubtract, sans-serif;
+    font-size: 20px;
+    padding: 18px 0;
+    width: 217px;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    font-weight: 100;
+    background: transparent; /* прозрачный */
+    transition: all 0.5s ease;
+}
+.btn:hover {
+    background: #fff;
+    color: #0609a9;
+}
+
+
+h1, h2, h3, h4, h5, h6 { 
+    font-family: Jaapokkisubtract, sans-serif; 
+    letter-spacing: 0.1em;
+    font-weight: 100;
+}
+p { line-height: 1.6em }
+span { font-family: Jaapokkisubtract, sans-serif; }
+/*===================================*/
+
+/*--- Header ---*/
+
+header {
+    background: #0207c2 url(../image/first-bg.jpg) no-repeat center bottom / cover;
+    color: #fff;
+    height: 100vh;
+    box-shadow: 0 50px 210px rgba(33, 48, 99, 0.5);
+}
+
+header .container {
+    height: 100vh;
+}
+
+/*-- LOGO ---*/
+.logo {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    color: #0000a0;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 48px;
+    display: block;
+    transition: all 0.4s ease;
+    position: absolute;
+    top: 9%;
+}
+.logo:hover { border-radius: 25px; }
+
+/*---- BRAAAH ----*/
+.bra {
+    background: #fff;
+    color: #0304b9;
+    font-size: 18px;
+    height: 174px;
+    width: 42px;
+    padding: 10px 15px;
+    position: absolute;
+    left: 60%;
+    top: 0;
+    line-height: 1.4em;
+}
+
+/*-- MENU --*/
+.hamburger {
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 9%;
+    cursor: pointer;
+}
+.hamburger span {
+    background: #fff;
+    display: block;
+    height: 2px;
+    margin-bottom: 6px;
+    float: right;
+    clear: both;
+    width: 100%;
+}
+.hamburger span:nth-child(1){  background: red; }
+.hamburger span:nth-child(2){ width: 75%; }
+.hamburger span:nth-child(3){ width: 50%; }
+.hamburger:hover span { float: left; }
+/*---------------------------------*/
+
+
+/*--- Offer ----*/
+.offer {
+    /*border: solid 2px red;*/
+    position: absolute;
+    left: 0;
+    top: 17%;
+    /*top: 50%;
+    margin-top: -270px;*/
+}
+.offer_bg {
+    color: #1b1cc4;
+    font-size: 300px;
+    position: absolute;
+}
+/*- Title -*/
+.offer h1{
+    font-size: 55px;
+    position: relative;
+    width: 660px;
+    margin-top: 120px;
+    margin-left: 136px;
+}
+.offer h1:after {
+     content: '';
+     display: block;
+     background: #fff;
+     width: 29px;
+     height: 5px;
+     position: absolute;
+     left: 46%;
+     top: -10%;
+}
+.offer p {
+    font-size: 17px;
+    width: 340px;
+    margin-top: 35px;
+    margin-left: 215px;
+}
+
+/*--- Button ----*/
+.offer_btn {
+    background: #0609a9;
+    border: 3px solid #fff;
+    color: #fff;
+    margin: 58px 0 0 342px;
+}
+
+/*-- NEXT --*/
+.next {
+    /*border: solid 1px white;*/
+    font-size: 300px;
+    width: 430px;
+    position: absolute;
+    right: 4%;
+    top: 27%;
+    text-shadow: 15px 15px 0 #01039d
+}
+.next p {
+    letter-spacing: .03em;
+    line-height: 0.66em;
+}
+.next span { color: #0048ff }
+
+/*-- SCROLL DOWN --*/
+.scrool {
+    display: block;
+    position: absolute;
+    right: 4%;
+    bottom: 0;
+    color: #fff;
+    font-size: 22px;
+    border-right: 3px solid #fff;
+    height: 135px;
+    padding: 23px 45px 68px 0; 
+    transition: all 0.5s ease;
+}
+.scrool:hover {
+    background: #fff;
+    color: #0001c5;
+}
+/*-- End Header ------*/
+
+
+/********************/
+/*--- Section ---*/
+.services {
+    padding-top: 165px;
+}
+
+/* Title */
+.section_title {
+
+}
+.section_title p {
+   font-size: 23px;
+   color: #a6a6e4;
+
+}
+.section_title h2 {
+    position: relative;
+   font-size: 85px;
+   color: #0001c5;
+   margin-left: 50px;
+
+}
+.section_title h2:after {
+    content: '';
+    display: inline-block;
+    background: #1e1fec;
+    width: 29px;
+    height: 5px;
+    letter-spacing: 0.04em;
+    position: absolute;
+    bottom: 15px; 
+    margin-left: 15px;
+}
+/*-- End Title --*/
+
+/*-- Service List --*/
+.servis {
+    margin-top: 120px;
+    margin-bottom: 183px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.servisec_list {
+    width: 20%;
+    border: 4px solid #0001c5;
+    display: block;
+    padding: 60px 0 120px 53px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.servisec_list i { 
+    font-size: 48px;  
+    display: block; 
+}
+.servisec_list h3 { 
+    font-size: 26px;
+    margin-top: 50px;
+}
+.servisec_list:hover {
+    background: #0001c5;
+    color: #fff;
+    box-shadow: 16px 16px 65px rgba(0, 1, 197, 0.45);
+}
+
+.plus {
+    font-size: 31px;
+    width: 40px;
+    height: 40px;
+    background: #0001c5;
+    color: #fff;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.number_servis {
+    font-size: 23px;
+    color: #a6a6e4;
+    position: absolute;
+    left: -55px;
+    top: 30px;
+}
+/*--- End Servisec ---*/
+
+/*--- Footer ---*/
+footer {
+    background: #ededf8;
+    padding: 160px 0;
+}
+
+.credits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-footer {
+    background: #0000a0;
+    color: #fff;
+    position: relative;
+    top: auto;
+}
+.credits_btn {
+    border: 3px solid #1e1fec;
+    color: #1e1fec;
+    font-size: 17px;
+    padding: 13px 0;
+    width: 172px;
+}
+.up {
+    font-size: 19px;
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+

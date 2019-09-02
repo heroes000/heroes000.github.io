@@ -1,0 +1,65 @@
+body {
+	min-width: 320px;
+	line-height: 1.6;
+	position: relative;
+	font-family: "OpenSansRegular", sans-serif;
+	overflow-x: hidden;
+}
+.hidden {
+	display: none;
+}
+.main_head > .navbar {
+	margin-bottom: 0;
+	z-index: 30;
+}
+.navbar-brand {
+	padding: 0;
+	position: relative;
+	z-index: 2;
+}
+.collapse {
+	position: relative;
+}
+.main_head ul.navbar-nav {
+	position: relative;
+	z-index: 3;
+}
+
+.carousel {
+	top: -15px;
+}
+.carousel-inner > .item > img {
+	position: relative;
+}
+.carousel-inner .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 36, 36, .67);
+    z-index: 1;
+}
+.carousel-control {
+	z-index: 10;
+}
+.slide_img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.carousel-inner .h1 {
+    font-family: "OpenSansBold", sans-serif;
+    line-height: 1.5;
+    margin-top: 0;
+}
+
+
+
+
+
+

@@ -1,0 +1,224 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px) {
+
+   .waranty { 
+   display: none; 
+ }
+/*- Section Main cats ---*/
+   .mc_item h4 {
+   	 font-size: 18px;
+ }
+   /*-- Стрелки выпадающего меню --*/
+   .mc_item_wrap .arrow2::after {
+      left: 226px;
+ }
+   .mc_item_wrap .arrow3::after {
+      left: 382px;
+ }
+   .mc_item_wrap .arrow4::after {
+      left: 538px;
+ }
+   .mc_item_wrap .arrow5::after {
+    left: 694px;
+ }
+   .mc_item_wrap .arrow6::after {
+    left: 852px;
+ }
+ /*-Foto Content-*/
+ .hi_item img {
+    height: 230px;  
+ }
+  footer {
+  	font-size: 18px;
+  }
+  footer ul li {
+  	padding-right: 20px;
+  }
+  footer ul li:last-child {
+    padding-right: 0;
+ }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+   /*-- Header ---*/
+   .top_addres {
+   	    padding-left: 40px;
+   }
+   .ta_right {
+		padding-left: 0;
+  }
+
+   .buttons_top {
+   	    text-align: center;
+   }
+   /*- Menu -*/
+   .top_menu {
+   	    letter-spacing: 0;
+   }
+   .top_menu img {
+   	padding: 22px 8px;
+   }
+   .top_menu a {
+   	padding: 0 20px 0 45px;
+   }
+
+   /*-- Section main cats --*/
+   .main_cats {
+   	padding-top: 10px;
+   }
+   .mc_wrap {
+   	display: block;
+   	padding: 0 0 90px 0;
+   }
+   .mc_item_wrap {
+    width: 300px;
+    margin: 12px;
+   }
+   /*-- Окошко выпадающего меню -*/
+   body .mc_wrap .mc_item_wrap ul {
+   	margin-top: 14px;
+   }
+   /*-- Стрелка меню ---*/
+   .mc_item_wrap .arrow::after,
+   .mc_item_wrap .arrow3::after,
+   .mc_item_wrap .arrow5::after {
+    left: 186px;
+   }
+   .mc_item_wrap .arrow2::after,
+   .mc_item_wrap .arrow4::after,
+   .mc_item_wrap .arrow6::after {
+    left: 513px;
+   }
+
+   /*-- Section S bottom --*/
+   .sb_content {
+   	font-size: 13px;
+   }
+   .s_bottom img {
+    width: 100%;
+    left: 0;
+   }
+   /*--- Footer ---*/
+   .bottom_menu {
+   	padding-top: 10px;
+   }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+   /*-- Header --*/
+   .top_addres strong {
+    font-size: 28px;
+   }
+   .top_line a {
+    font-size: 18px;
+   }
+   .logo_wrap {
+   	display: none;
+   }
+   header {
+   	min-height: 520px;
+   }
+   header h1 {
+   	font-size: 34px;
+   }
+
+   /*-- Top Menu --*/
+   .top_menu li img {
+   	display: none;
+   }
+   .top_menu a {
+   	font-size: 18px;
+    padding: 0 22px;
+   }
+
+   .main_cats h2 {
+   	font-size: 34px;
+   }
+   .s_black h2::after,
+   .s_black h2::before {
+   	display: none;
+   }
+
+/*-- Услуги мастерской --*/
+   .mc_item_wrap {
+   	width: 70%;
+   }
+   .mc_item h4 {
+    font-size: 22px;
+   }
+   .mc_item img {
+    width: 150px;
+   }
+   .mc_toggl {
+   	height: 40px;
+   }
+   .arrow::after, .arrow2::after, .arrow3::after, .arrow4::after, .arrow5::after, .arrow6::after {
+   	display: none;
+   }
+
+ /*--- Article --*/
+   article h2.art_header::before,
+   article h2.art_header::after {
+   	display: none;
+   }  
+   .art_header {
+    font-size: 30px;  
+   }
+   p.h_desc {
+    font-size: 13px;
+   }
+
+   /*-- Footer --*/
+   .sb_header h2 {
+   	font-size: 28px;
+   }
+   .s_bottom img {
+    display: none;
+   }
+
+   .navbar {
+	display: none;
+   }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
