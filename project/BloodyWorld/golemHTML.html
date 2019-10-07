@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head lang="en">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="BloodyStyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Pattaya&subset=latin,cyrillic' rel='stylesheet'>
+    <script src="infoGameButton.js" async></script>
+    <script src="golemScr.js" async></script>
+    <link rel="stylesheet" href="cssingoGameBut.css">
+
+
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body id="BodyGolem">
+<div class="CenterBlock">
+
+    <!-- Ники -->
+    <p class="nameplayer">Каратель</p>
+    <p class="namecpu">Голем<p>
+    <!------------ИГРОК-------------------------------->
+    <div class="imgPlayer PlayGolem">
+        <img src="image/ricar.jpg">
+        <form name="Form" id="form2">
+            <input type="radio" name="PlayerBut" id="PlayerheadBut" value="headPla" class="radioPlay" onclick="G();">
+            <input type="radio" name="PlayerBut" id="PlayerBodyBut" value="bodyPla" class="radioPlay" onclick="G();">
+            <input type="radio" name="PlayerBut" id="PlayerLegBut" value="legPla" class="radioPlay" onclick="G();">
+            <!--         <input type="checkbox" name="PlayerBut" id="PlayerRigtArmyBut">
+                     <input type="checkbox" name="PlayerBut" id="PlayerLeftArmyBut"> -->
+        </form>
+    </div>
+    <!--============================================================================ -->
+
+    <!----------CPU   ------------------------------------->
+    <div class="imgCpu GolemImg">
+        <img src="image/golem.jpg" >
+        <form id="FormCpu">
+            <input type="radio" name="cpuBut" id="CpuHead" class="radioCpu" value="head" onclick="G();">
+            <input type="radio" name="cpuBut" id="CpubodyBut" class="radioCpu" value="body" onclick="G();">
+            <input type="radio" name="cpuBut" id="CpuLegBut" class="radioCpu" value="leg" onclick="G();">
+            <input type="radio" name="cpuBut" id="CpuRigthArmBut" class="radioCpu" value="rigtArm" onclick="G();">
+            <input type="radio" name="cpuBut" id="CpuLeftArmBut" class="radioCpu" value="leftArm" onclick="G();">
+        </form>
+    </div>
+    <!--============================== Кнопка ================================================================= -->
+
+    <button type="submit" id="ButImage" onclick="Battle()" disabled ></button>
+
+    <!------- Дисплей ------->
+    <pre class="displayPlayer BorderGolemPlay"></pre>
+    <div class="displayCpu BorderGolem"></div>
+    <!--===================================================-->
+
+    <!--------------- HP ----------------------------->
+
+    <div id="HpPlayer">
+        <p></p>
+    </div>
+    <!------- Характеристики -->
+    <div class="ParamPlay BorderParamPlay">
+        <p id="ATKplay"></p>
+        <p id="KritParam"></p>
+    </div>
+
+
+    <!--======= CPU =======-->
+    <div id="HpCpu">
+        <p></p>
+    </div>
+
+    <!-- CPU -->
+    <div class="ParamCpu BorderParamCpu">
+        <p id="ATKcpu"></p>
+        <p id="blockCpu"></p>
+    </div>
+
+    <!--============= Окошко Победы ================================================-->
+    <div id="my_window_win">
+        <div id="img_win" >
+            <img src="image/winner.jpeg">
+        </div>
+
+        <div id="txt_display_win">
+            <p>ПОБЕДА</p>
+        </div>
+        <a  href="ChoiceMonsters.html"><input type="button" id="but_img_win" value="закрыть"></a>
+    </div>
+    <!------------------------------------------------------------------------>
+    <!--============== Окошко поражения ====================================-->
+    <div id="my_window_lose">
+        <div id="img_lose" >
+            <img src="image/lose.jpg">
+        </div>
+
+        <div id="txt_display_lose">
+            <p>ПОРАЖЕНИЕ</p>
+        </div>
+        <a  href="ChoiceMonsters.html"><input type="button" id="but_img_lose" value="закрыть"></a>
+    </div>
+
+
+</div>
+<!-- Описание Скелета -->
+<div class="text_background gole"></div>
+<div class="text_from_mob BorderTextGolem">
+    <h2>Голем</h2>
+    <p><span>Лесной Голем</span> - живет в старых лесах. Его каменная кожа очень прочная.
+       Живут такие големы сотни лет, оберегая лес. Для них нет друзей.
+       Известно что они выше трех метров в высоту, медлительные но
+       очень крепкие и сильные. Могут подымать огромные камни, вырывать
+       небольшие деревья с корнями. А человека вовсе роздавить как жука.
+       Но чем больше такой голем злился тем быстрее становился, а глаза
+       светились еще ярче. </p>
+    <br>
+     <p>В бою Лесной Голем не очень поворотлив, но очень живучий. Пробить
+        его кожу очень сложно. Не зная как ему навредить, воины просто убегали прочь.
+        Те кто не хотел убегать, были раздавлены на месте.</p>
+</div>
+<!--============================================================================= -->
+<!-------- Показ урона под жизнями -->
+<div class="playDmgDisplay">
+    <p></p>
+</div>
+<!-----  CPU -->
+<div class="cpuDmgDisplay">
+    <p></p>
+</div>
+<!--===============================================-->
+<!-- Показ Блока под жизнями -->
+<div class="playBLOCKDisplay">
+    <p></p>
+</div>
+<!-----  CPU -->
+<div class="cpuBLOCKDisplay">
+    <p></p>
+</div>
+<!---------------------------------------------- -->
+
+<!-- Кнопка Как играть -->
+<button type="button" class="infoBut" value="как играть" ><p>Как играть</p></button>
+
+<div class="infoGame">
+
+    <div class="infoGameBlock1 txt buttoncss">
+        <p>Сперва нужно выставить одну точку защиты</p>
+        <p>Вверхняя это голова</p>
+        <p>Середняя это туловище</p>
+        <p>Нижняя это ноги</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock2 txt buttoncss">
+        <p>Затем выбрать одну точку атаки. Куда атаковать врага</p>
+        <p>Вверхняя это голова</p>
+        <p>Середняя это туловище</p>
+        <p>Нижняя это ноги</p>
+        <p>Левая и правая это руки</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock3 txt buttoncss">
+        <p>После выбранных точек защиты и атаки, эта кнопка завершает ход</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock4 txt buttoncss">
+        <p>После завершения хода, в первом блоке отображается информация </p>
+        <p>о вашей атаки и защиты ( удачно ли вы атаковали/заблокировали </p>
+        <p>удар или нет ).</p>
+        <p>Во втором блоке информация о ходе противника, его атаки и</p>
+        <p>блока от вашего удара.</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock5 txt buttoncss">
+        <p>Это ваши очки жизни</p>
+        <p>После успешной атаки вами/противника, отнимаются очки жизни.</p>
+        <p>Если удар был заблокирован, очки не отнимаются.</p>
+        <p>У кого первого жизнь опустится к нулю, то погибнет.</p>
+        <button type="button">закрыть</button>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+

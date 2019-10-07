@@ -1,0 +1,2277 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="labyrincss.css">
+    <link rel="stylesheet" href="BloodyStyle.css">
+    <link rel="stylesheet" href="mapcss.css">
+    <!--<script src="sceleton/BloodyScript.js" async></script>
+    <script src="labyrinJS=2.js" async></script>
+    <script src="labyrinJS=3.js" async></script>
+    -->
+
+
+
+    <script src="labVarJs.js" async></script>
+    <script src="labyrinJS.js" async></script>
+
+    <script src="labMobFunction.js" async></script>
+
+    <link rel="stylesheet" href="cssingoGameBut.css">
+
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            max-width: 1200px;
+            height: 640px;
+            border: 2px solid red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="mapCenterBlock">
+
+    <img src="image/map-lab/start.png" class="map-start" >
+    <img src="image/map-lab/s01.png" class="map-s01" style="visibility: hidden">
+    <img src="image/map-lab/s02.png" class="map-s02" style="visibility: hidden">
+    <img src="image/map-lab/s03.png" class="map-s03" style="visibility: hidden">
+    <img src="image/map-lab/s04.png" class="map-s04" style="visibility: hidden">
+    <img src="image/map-lab/s05.png" class="map-s05" style="visibility: hidden">
+    <img src="image/map-lab/s06.jpg" class="map-s06" style="visibility: hidden">
+    
+    <img src="image/map-lab/map_mob.png" class="map-mob" style="visibility: hidden">
+
+    <img src="image/map-lab/s07.jpg" class="map-s07" style="visibility: hidden">
+    <img src="image/map-lab/s08.jpg" class="map-s08" style="visibility: hidden">
+    <img src="image/map-lab/s09.jpg" class="map-s09" style="visibility: hidden">
+    <img src="image/map-lab/s10.jpg" class="map-s10" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s11" style="visibility: hidden">
+    <img src="image/map-lab/s12.png" class="map-s12" style="visibility: hidden">
+    <img src="image/map-lab/s15.png" class="map-s13" style="visibility: hidden">
+    <img src="image/map-lab/s14.jpg" class="map-s14" style="visibility: hidden">
+    <img src="image/map-lab/s15.jpg" class="map-s15" style="visibility: hidden">
+    <img src="image/map-lab/s14.png" class="map-s16" style="visibility: hidden">
+    <img src="image/map-lab/s15.png" class="map-s17" style="visibility: hidden">
+    <img src="image/map-lab/s18.jpg" class="map-s18" style="visibility: hidden">
+    <img src="image/map-lab/s019.jpg" class="map-s19" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s20" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s21" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s22" style="visibility: hidden">
+    <img src="image/map-lab/s15.png" class="map-s23" style="visibility: hidden">
+    <img src="image/map-lab/s010.png" class="map-s25" style="visibility: hidden">
+    <img src="image/map-lab/s025.jpg" class="map-s26" style="visibility: hidden">
+    <img src="image/map-lab/s26-27.png" class="map-s27" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s28" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s29"  style="visibility: hidden">
+    <img src="image/map-lab/s12.png" class="map-s30"  style="visibility: hidden">
+    <img src="image/map-lab/s15.png" class="map-s006" style="visibility: hidden"> <!-- для 06 -->
+    <img src="image/map-lab/s31_r.png" class="map-s30_2"  style="visibility: hidden">
+    <img src="image/map-lab/s31_up_down.jpg" class="map-s31_up" style="visibility: hidden">
+    <img src="image/map-lab/s31_up_down.jpg" class="map-s31_down"  style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s32"  style="visibility: hidden">
+    <img src="image/map-lab/s33.png" class="map-s33" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s35"  style="visibility: hidden">
+    <img src="image/map-lab/s10.jpg" class="map-s36" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s37" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s38" style="visibility: hidden">
+    <img src="image/map-lab/s33.png" class="map-s39" style="visibility: hidden">
+    <img src="image/map-lab/s010.png" class="map-s42" style="visibility: hidden">
+    <img src="image/map-lab/s010.png" class="map-s43" style="visibility: hidden">
+    <img src="image/map-lab/s44.jpg" class="map-s44" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s45"  style="visibility: hidden">
+    <img src="image/map-lab/s14.png" class="map-s9_46" style="visibility: hidden"> <!-- Для переходя с 9 сексии к 46 -->
+    <img src="image/map-lab/s010.png" class="map-s44_43"  style="visibility: hidden">
+    <img src="image/map-lab/s37_36.png" class="map-s37_36"  style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s30_29" style="visibility: hidden">
+
+    <img src="image/map-lab/s10.jpg" class="map-s47" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s48" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s49" style="visibility: hidden">
+    <img src="image/map-lab/s33.png" class="map-s50" style="visibility: hidden">
+
+    <img src="image/map-lab/s010.png" class="map-s48_52" style="visibility: hidden">
+    <img src="image/map-lab/s37_36.png" class="map-s53" style="visibility: hidden">
+    <img src="image/map-lab/s53_54.png" class="map-s54" style="visibility: hidden">
+    <img src="image/map-lab/s10.jpg" class="map-s55" style="visibility: hidden">
+
+    <img src="image/map-lab/s11.png" class="map-s56r" style="visibility: hidden">
+    <img src="image/map-lab/s14.png" class="map-s56d" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s57" style="visibility: hidden">
+    <img src="image/map-lab/s33.png" class="map-s58" style="visibility: hidden">
+    <img src="image/map-lab/s31_r.png" class="map-s60" style="visibility: hidden">
+    <img src="image/map-lab/s15.jpg" class="map-s60d" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s61" style="visibility: hidden">
+
+    <img src="image/map-lab/s11.png" class="map-s62" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s3_64" style="visibility: hidden">
+    <img src="image/map-lab/s61_60.png" class="map-s61_60" style="visibility: hidden">
+    <img src="image/map-lab/s010.png" class="map-s54_53" style="visibility: hidden">
+    <img src="image/map-lab/s11.png" class="map-s47_45" style="visibility: hidden">
+
+    <img src="image/map-lab/arrow-up.png" class="arrow">
+
+    <img src="image/map-lab/map_mob.png" class="map-mob2" style="visibility: hidden">
+    <img src="image/map-lab/map_mob.png" class="map-mob3" style="visibility: hidden">
+    <img src="image/map-lab/map_mob.png" class="map-mob4" style="visibility: hidden">
+</div>
+
+
+
+
+<div class="centBlock">
+
+    <div id="time" style="display: none"></div>
+
+<!--===================  ПЕРВЫЙ блок Старт  ====================================================================== -->
+    <div class="start_up"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_29.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="start_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="start_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="start_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_26.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s01 ====================================================================== -->
+    <div class="s01_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_25.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s01_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s01_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s01_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_23.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s02 ====================================================================== -->
+    <div class="s02_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s02_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_27.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s02_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_27.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s02_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s03 ====================================================================== -->
+    <div class="s03_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s03_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s03_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s03_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_30.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s04 поворот на лево после s03 ====================================================================== -->
+    <div class="s04_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_8.png">
+
+        <img src="image/golemlab75px.png" class="mob" > <!----------- МОБ блока 5 -->
+
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s04_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s04_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s04_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s05 поворот на лево после s03 ====================================================================== -->
+    <div class="s05_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_33.png">
+
+        <img src="image/golemlab150px.png" class="mob mob150" >   <!----------- МОБ блока 6 150px -->
+
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s05_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s05_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s05_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s06  лево после s03 ====================================================================== -->
+    <div class="s06_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_29.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s06_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_24.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s06_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s06_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_8.png">
+
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s07  лево после s03 ====================================================================== -->
+    <div class="s07_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_25.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s07_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s07_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s07_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_6.png">
+        <img src="image/scellab150px.png" class="mob mob150"> <!--------------- МОБ Скелет -->
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s08  лево после s03 ====================================================================== -->
+    <div class="s08_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s08_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_16.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s08_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_16.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s08_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_8.png">
+        <img src="image/scellab75px.png" class="mob" > <!----------------------------------- МОБ Скелет -->
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s09 ====================================================================== -->
+    <div class="s09_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s09_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s09_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s09_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_30.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s10 ====================================================================== -->
+    <div class="s10_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s10_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s10_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s10_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s11 ====================================================================== -->
+    <div class="s11_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s11_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_36.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s11_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s11_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_28.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s12 ====================================================================== -->
+    <div class="s12_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s12_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s12_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s12_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s13 ====================================================================== -->
+    <div class="s13_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s13_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_28.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s13_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s13_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s14 ====================================================================== -->
+    <div class="s14_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s14_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s14_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s14_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s15 ====================================================================== -->
+    <div class="s15_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s15_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s15_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s15_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s16 ====================================================================== -->
+    <div class="s16_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s16_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s16_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s16_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s17 ====================================================================== -->
+    <div class="s17_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s17_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s17_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s17_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s18 ====================================================================== -->
+    <div class="s18_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s18_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s18_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s18_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s19 ====================================================================== -->
+    <div class="s19_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s19_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s19_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s19_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s20 ====================================================================== -->
+    <div class="s20_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s20_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_30.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s20_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s20_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s21 ====================================================================== -->
+    <div class="s21_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_27.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s21_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s21_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s21_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_27.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s22 ====================================================================== -->
+    <div class="s22_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s22_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <img src="image/golemlab75px.png" class="mob3" > <!----------- МОБ  -->
+
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s22_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s22_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s23 ====================================================================== -->
+    <div class="s23_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s23_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_23.png">
+        <img src="image/golemlab150px.png" class="mob3 mob150" > <!----------- МОБ  -->
+
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s23_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s23_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s24 ====================================================================== -->
+    <div class="s24_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s24_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_26.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s24_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s24_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s25 ====================================================================== -->
+    <div class="s25_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s25_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s25_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s25_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s26 ====================================================================== -->
+    <div class="s26_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s26_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s26_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s26_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s27 ====================================================================== -->
+    <div class="s27_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s27_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s27_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s27_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s28 ====================================================================== -->
+    <div class="s28_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s28_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s28_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s28_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s29 ====================================================================== -->
+    <div class="s29_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s29_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s29_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s29_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s30 ====================================================================== -->
+    <div class="s30_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s30_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_31.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s30_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s30_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s31 ====================================================================== -->
+    <div class="s31_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s31_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s31_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_28.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s31_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s32 ====================================================================== -->
+    <div class="s32_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s32_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s32_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s32_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s33 ====================================================================== -->
+    <div class="s33_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s33_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_23.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s33_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s33_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s34 ====================================================================== -->
+    <div class="s34_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s34_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_26.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s34_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s34_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s35 ====================================================================== -->
+    <div class="s35_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s35_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s35_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s35_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s36 ====================================================================== -->
+    <div class="s36_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s36_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s36_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s36_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s37 ====================================================================== -->
+    <div class="s37_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s37_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s37_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s37_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_28.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s38 ====================================================================== -->
+    <div class="s38_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s38_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <img src="image/golemlab75px.png" class="mob4" > <!----------- МОБ -->
+
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s38_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s38_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s39 ====================================================================== -->
+    <div class="s39_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_23.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s39_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_23.png">
+        <img src="image/golemlab150px.png" class="mob4 mob150" > <!----------- МОБ -->
+
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s39_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s39_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s40 ====================================================================== -->
+    <div class="s40_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s40_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_26.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s40_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s40_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!-- 41й блок это конец, выход -->
+
+    <!--===================  s42 ====================================================================== -->
+    <div class="s42_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s42_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s42_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s42_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s43 ====================================================================== -->
+    <div class="s43_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s43_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s43_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s43_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s44 ====================================================================== -->
+    <div class="s44_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s44_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s44_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s44_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s45 ====================================================================== -->
+    <div class="s45_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_28.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s45_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s45_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_36.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s45_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s46 ====================================================================== -->
+    <div class="s46_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s46_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s46_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s46_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s47 ====================================================================== -->
+    <div class="s47_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s47_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s47_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_33.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s47_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s48 ====================================================================== -->
+    <div class="s48_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s48_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s48_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_37.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s48_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_28.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s49 ====================================================================== -->
+    <div class="s49_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s49_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s49_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s49_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s50 ====================================================================== -->
+    <div class="s50_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s50_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_23.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s50_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s50_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s51 ====================================================================== -->
+    <div class="s51_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s51_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_25.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s51_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s51_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s52 ====================================================================== -->
+    <div class="s52_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_3.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s52_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s52_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s52_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s53 ====================================================================== -->
+    <div class="s53_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s53_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s53_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s53_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s54 ====================================================================== -->
+    <div class="s54_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s54_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s54_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s54_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s55 ====================================================================== -->
+    <div class="s55_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s55_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s55_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s55_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_6.png">
+        <img src="image/golemlab150px.png" class="mob2 mob150"> <!----------- МОБ Скелет -->
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s56 ====================================================================== -->
+    <div class="s56_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s56_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_28.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s56_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_32.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s56_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_15.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s57 ====================================================================== -->
+    <div class="s57_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s57_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s57_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_31.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s57_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s58 ====================================================================== -->
+    <div class="s58_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s58_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_23.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s58_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s58_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s59 ====================================================================== -->
+    <div class="s59_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_13.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s59_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_26.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s59_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s59_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s60 ====================================================================== -->
+    <div class="s60_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_33.png">
+        <img src="image/golemlab150px.png" class="mob2 mob150" > <!----------- МОБ -->
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s60_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_5.jpg">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s60_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_34.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s60_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_12.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s61 ====================================================================== -->
+    <div class="s61_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s61_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_10.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s61_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s61_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s62 ====================================================================== -->
+    <div class="s62_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s62_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s62_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s62_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+
+    <!--===================  s63 ====================================================================== -->
+    <div class="s63_up" style="display: none"> <!-- ПЕРЕД -->
+        <img src="image/lab/Screenshot_4.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s63_right" style="display: none"> <!-- ПРАВО-->
+        <img src="image/lab/Screenshot_8.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s63_left" style="display: none"> <!-- ЛЕВО-->
+        <img src="image/lab/Screenshot_6.png">
+        <button class="up"><img src="image/lab/up.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+
+    <div class="s63_ass" style="display: none"> <!-- ЗАД -->
+        <img src="image/lab/Screenshot_35.png">
+        <button class="no_exit"><img src="image/lab/no_exit.png"></button>
+        <button class="left"><img src="image/lab/left.png"></button>
+        <button class="right"><img src="image/lab/right.png"></button>
+    </div>
+    <!--========================================================================================= -->
+</div>
+
+
+
+
+
+<div class="CenterBlock golemon" style="display: none">
+
+    <!-- Ники -->
+    <p class="nameplayer">Каратель</p>
+    <p class="namecpu">Голем<p>
+    <!------------ИГРОК-------------------------------->
+    <div class="imgPlayer PlayGolem">
+        <img src="image/ricar.jpg">
+        <form name="Form" class="form2">
+            <input type="radio" name="PlayerBut" class="PlayerheadBut radioPlay" value="headPla"  onclick="G();">
+            <input type="radio" name="PlayerBut" class="PlayerBodyBut radioPlay" value="bodyPla"  onclick="G();">
+            <input type="radio" name="PlayerBut" class="PlayerLegBut radioPlay" value="legPla"  onclick="G();">
+
+        </form>
+    </div>
+    <!--============================================================================ --
+
+    <!----------CPU  ------------------------------------->
+    <div class="imgCpu GolemImg">
+        <img  src="image/golem.jpg" >
+        <form class="FormCpu">
+            <input type="radio" name="cpuBut" class="CpuHead radioCpu"  value="head" onclick="G();">
+            <input type="radio" name="cpuBut" class="CpubodyBut radioCpu"  value="body" onclick="G();">
+            <input type="radio" name="cpuBut" class="CpuLegBut radioCpu"  value="leg" onclick="G();">
+            <input type="radio" name="cpuBut" class="CpuRigthArmBut radioCpu"  value="rigtArm" onclick="G();">
+            <input type="radio" name="cpuBut" class="CpuLeftArmBut radioCpu"  value="leftArm" onclick="G();">
+        </form>
+    </div>
+    <!--============================== Кнопка ================================================================= -->
+
+    <button type="submit" class="ButImage" onclick="Battle()" disabled ></button>
+
+    <!------- Дисплей ------->
+    <pre class="displayPlayer BorderGolemPlay"></pre>
+    <div class="displayCpu BorderGolem"></div>
+    <!--===================================================-->
+
+    <!--------------- HP ----------------------------->
+
+    <div class="HpPlayer">
+        <p></p>
+    </div>
+    <!------- Характеристики -->
+    <div class="ParamPlay BorderParamPlay">
+        <p class="ATKplay"></p>
+        <p class="KritParam"></p>
+    </div>
+
+
+    <!--======= CPU =======-->
+    <div class="HpCpu"><p></p></div>
+    <div class="HpCpu2" style="display: none"><p></p></div>
+    <div class="HpCpu3" style="display: none"><p></p></div>
+    <div class="HpCpu4" style="display: none"><p></p></div>
+
+    <!-- CPU -->
+    <div class="ParamCpu BorderParamCpu">
+        <p class="ATKcpu"></p>
+        <p class="blockCpu"></p>
+    </div>
+
+    <!--============= Окошко Победы ================================================-->
+
+    <div id="window_win_gol">
+    <div class="img_win" >
+        <img src="image/winner.jpeg">
+    </div>
+
+    <div class="txt_display_win">
+        <p>ПОБЕДА</p>
+    </div>
+    <button class="but_img_win butWin">закрыть</button>
+</div>
+    <!------------------------------------------------------------------------>
+
+    <div id="window_win_gol2">
+        <div class="img_win" >
+            <img src="image/winner.jpeg">
+        </div>
+
+        <div class="txt_display_win">
+            <p>ПОБЕДА</p>
+        </div>
+        <button class="but_img_win butWin2" >закрыть</button>
+    </div>
+    <!------------------------------------------------------------------------>
+
+    <div id="window_win_gol3">
+        <div class="img_win" >
+            <img src="image/winner.jpeg">
+        </div>
+
+        <div class="txt_display_win">
+            <p>ПОБЕДА</p>
+        </div>
+        <button class="but_img_win butWin3" >закрыть</button>
+    </div>
+    <!------------------------------------------------------------------------>
+
+    <div id="window_win_gol4">
+        <div class="img_win" >
+            <img src="image/winner.jpeg">
+        </div>
+
+        <div class="txt_display_win">
+            <p>ПОБЕДА</p>
+        </div>
+        <button class="but_img_win butWin4" >закрыть</button>
+    </div>
+
+    <!--============== Окошко поражения ====================================-->
+    <div id="my_window_lose">
+        <div class="img_lose" >
+            <img src="image/lose.jpg">
+        </div>
+
+        <div class="txt_display_lose">
+            <p>ПОРАЖЕНИЕ</p>
+        </div>
+
+        <a href='javascript: document.location.href = "index.html";'><button class="mobWinner but_img_win" >закрыть</button></a>
+    </div>
+
+
+</div>
+
+
+
+
+<!--============================================================================= -->
+<!-------- Показ урона под жизнями -->
+<div class="playDmgDisplay">
+    <p></p>
+</div>
+<!-----  CPU -->
+<div class="cpuDmgDisplay">
+    <p></p>
+</div>
+<!--===============================================-->
+<!-- Показ Блока под жизнями -->
+<div class="playBLOCKDisplay">
+    <p></p>
+</div>
+<!-----  CPU -->
+<div class="cpuBLOCKDisplay">
+    <p></p>
+</div>
+<!---------------------------------------------- -->
+
+<!-- Кнопка Как играть -->
+<button type="button" class="infoBut" value="как играть" style="display: none"><p>Как играть</p></button>
+
+<div id="infoGame" style="display: none">
+
+    <div class="infoGameBlock1 txt buttoncss">
+        <p>Сперва нужно выставить одну точку защиты</p>
+        <p>Вверхняя это голова</p>
+        <p>Середняя это туловище</p>
+        <p>Нижняя это ноги</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock2 txt buttoncss">
+        <p>Затем выбрать одну точку атаки. Куда атаковать врага</p>
+        <p>Вверхняя это голова</p>
+        <p>Середняя это туловище</p>
+        <p>Нижняя это ноги</p>
+        <p>Левая и правая это руки</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock3 txt buttoncss">
+        <p>После выбранных точек защиты и атаки, эта кнопка завершает ход</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock4 txt buttoncss">
+        <p>После завершения хода, в первом блоке отображается информация </p>
+        <p>о вашей атаки и защиты ( удачно ли вы атаковали/заблокировали </p>
+        <p>удар или нет ).</p>
+        <p>Во втором блоке информация о ходе противника, его атаки и</p>
+        <p>блока от вашего удара.</p>
+        <button type="button">далее</button>
+    </div>
+
+    <div class="infoGameBlock5 txt buttoncss">
+        <p>Это ваши очки жизни</p>
+        <p>После успешной атаки вами/противника, отнимаются очки жизни.</p>
+        <p>Если удар был заблокирован, очки не отнимаются.</p>
+        <p>У кого первого жизнь опустится к нулю, то погибнет.</p>
+        <button type="button">закрыть</button>
+    </div>
+
+</div>
+
+<!----- Начальное окно с фото, для обьяснения что нужно делать -->
+<div class="window_start" >
+    <img src="image/imgStart.png">
+    <p class="p1">Здраствуй Каратель. Нам нужно что бы ты нашел и уничтожил ядовитых големов. Они отравляют окружащею среду, воду, воздух.
+        <button class="btnP">далее</button>
+    </p>
+    <p style="display: none" class="p2">Нам нужен бестрашный и сильный воин, который не побоиться их внешнего вида и сможет их одолеть.
+        <button class="btnP2">далее</button>
+    </p>
+    <p style="display: none" class="p3">Отправляйсья в подземный лабиринт, найди и уничтожь 4 голема. Но тебе нужно поторопится. Воздух там крайне ядовит.
+        <button class="btnP3">далее</button>
+    </p>
+    <p style="display: none" class="p4">У тебя будет не больше 6-ти минут, пока яд не убьет тебя. Поспеши и будь осторожен, они очень сильны. Удачи
+        <button class="btnP4">закрыть</button>
+    </p>
+</div>
+
+
+<!----- окно окончания игры и переход в начало  -->
+<div class="window_end" style="display: none" >
+    <img src="image/imgStart.png">
+    <p class="p1">У тебя получилось!!! Невероятно. Ты смог выжить..
+        <button class="btnP">далее</button>
+    </p>
+    <p style="display: none" class="p2">Ты убил этих проклятых ядовитых големов. Больше они не будут отравлять окружающий мир. Это победа
+        <a href='javascript: document.location.href = "index.html";'><button class="btnEnd">закрыть</button></a>
+    </p>
+</div>
+
+<!---- Таймер -->
+<div id="timer"></div>
+
+<script src="golemScr.js" async></script>
+
+</body>
+<script src="infoGameButton.js" async></script>
+</html>

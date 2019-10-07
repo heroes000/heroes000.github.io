@@ -1,0 +1,570 @@
+/*----------- Общие теги */
+
+
+/*--- Фото Игрока --------------------------*/
+.imgPlayer {
+    /* border: solid 5px black; */
+    border-style: inset;
+    border-width: 5px;
+
+    /* border: 50px solid transparent ;
+     border-image: url("image/ramki/fairy.jpeg") 15% 20% stretch round; */
+    width: 300px;
+    height: 400px;
+    left: 195px;
+    top: 5px;
+    position: absolute;
+    box-shadow: 8px 10px 4px black;
+}
+
+/*------ Ник*/
+.nameplayer{
+    position: relative;
+    width: 120px;
+    font-size: 2em;
+    color: white;
+    left: 50px;
+}
+.namecpu{
+
+    color: white;
+    width: 120px;
+    font-size: 2em;
+    position: relative;
+    left: 920px;
+    bottom: 35px ;
+}
+
+/*--- Фото Скелета --------------------------*/
+.imgCpu {
+    /*border: solid 5px black;*/
+    background-image: url("image/golem.jpg");
+    border-style: inset;
+    border-width: 5px;
+
+    width: 300px;
+    height: 400px;
+
+    left: 582px;
+    top: 5px;
+    position: absolute;
+
+    box-shadow: 8px 10px 4px black;
+}
+
+/*------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------*/
+
+.CenterBlock {
+     /*border: solid 1px red;*/
+    width: 1100px;
+    height: 650px;
+    position: absolute;
+
+      margin-left: 30px;
+      margin-right: auto;
+
+    top: 10px;
+}
+/*---------------------------------------------------------*/
+/*------------ кнопка удара -----------------------------------------------------------------------*/
+.ButImage{  transition: transform .5s  }
+
+
+.ButImage {
+    width: 50px;
+    height: 50px;
+    background: url("image/ButtAttack.jpeg");
+    position: absolute;
+    top: 230px;
+    left: 520px;
+    border-radius: 10px;
+    box-shadow: 6px 8px 4px black;
+    cursor: pointer;
+}
+.ButImage:hover {
+    border-color: red;
+}
+/*-----------------------------------------------------------------------------*/
+
+/*----------- Дисплеи для текста уронов ----------------*/
+.displayPlayer {
+
+    border-style: inset; /* Рамка */
+    border-width: 4px;
+
+    width: 670px;
+    height: 50px;
+    position: absolute;
+
+    top: 440px;
+    left: 197px;
+    /*background: url("image/textScelet.jpg");*/
+    background-color: rgba(0,0,0, .8);
+    display: block;
+
+    padding-left: 15px; /*- отступ текста внутри этого блока*/
+    padding-top: 15px;
+    overflow: auto;
+}
+
+
+/*---------------------------------------------------------------------------------*/
+/*---- CPU -----*/
+.displayCpu{
+
+    border-style: inset; /* Рамка */
+    border-width: 4px;
+
+    width: 670px;
+    height: 50px;
+    position: absolute;
+
+    top: 515px;
+    left: 197px;
+    /*background: url("image/textScelet.jpg");*/
+    background-color: rgba(0,0,0, .8);
+    display: block;
+
+    padding-left: 15px; /*- отступ текста внутри этого блока*/
+    padding-top: 15px;
+    overflow: auto;
+}
+
+
+/*==================== Текст ударов ======================================================*/
+.displayPlayer p{
+    font-size: 20px;
+    font-weight: 500;
+    font-family:  "Marker Felt", "Comic Sans MS", fantasy;
+    color: white;
+}
+
+
+
+.displayCpu p{
+    font-size: 20px;
+    font-weight: 500;
+    font-family:  "Marker Felt", "Comic Sans MS", fantasy;
+    color: white;
+}
+
+/*=====================================================*/
+
+/*-------- параметры игроков ----------------------*/
+
+/*---- Игрок HP ----*/
+.HpPlayer{
+    width: 85px;
+    height: 100px;
+    position: absolute;
+    background: url("image/xpGif.gif") no-repeat;
+    background-size: 85px 80px;
+    top: 40px;
+    left: 50px;
+    /*border: red;*/
+    border-style: inset; /* Рамка */
+    border-width: 3px;
+
+}
+.HpPlayer p{  /*-- показывает количество жизней --*/
+    color: white;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 75px;
+}
+/*------ CPU HP ----------*/
+.HpCpu, .HpCpu2, .HpCpu3, .HpCpu4{
+
+    width: 85px;
+    height: 100px;
+    position: absolute;
+    background: url("image/xpGif.gif") no-repeat;
+    background-size: 85px 80px;
+    top: 40px;
+    left: 945px;
+    /*border: red;*/
+    border-style: inset; /* Рамка */
+    border-width: 3px;
+}
+/* отображение жизней*/
+.HpCpu p, .HpCpu2 p, .HpCpu3 p, .HpCpu4 p{
+    color: white;
+    font-size: 20px;
+    margin-left: 35px;
+    margin-top: 75px;
+}
+/*---------------------------------------------------------------------------------*/
+
+/*----- Характеристики ------*/
+
+.ParamPlay {
+    border: darkgray;
+    border-style: inset; /* Рамка */
+    border-width: 3px;
+
+    padding: 10px 5px;
+    width: 170px;
+    position: absolute;
+    top: 320px;
+    left: -3em;
+    background: black;
+}
+.ParamPlay p{
+    color: white;
+    padding-left: 5px;
+}
+/*-----------------------------------*/
+
+/* ----- характеристики cpu ---- */
+.ParamCpu {
+    border: darkgrey;
+    border-style: inset; /* Рамка */
+    border-width: 3px;
+
+    background: black;
+
+    padding: 10px 5px;
+    width: 170px;
+    position: absolute;
+    top: 320px;
+    right: -4em;
+    /* background: black; */
+}
+
+.ParamCpu p{
+    color: white;
+    padding-left: 5px;
+}
+/*-----------------------------------------------------------------*/
+
+/*----------- Расположение кнопок на картине CPU ----------------------------- */
+.CpuHead {              /* Голова */
+    position: relative;
+    bottom: 350px;
+    left: 140px;
+    cursor: pointer;
+
+}
+.CpubodyBut {                 /* Туловище */
+    position: relative;
+    bottom: 230px;
+    left: 118px;
+    cursor: pointer;
+
+}
+.CpuLegBut {                 /* Ноги */
+    position: relative;
+    bottom: 110px;
+    left: 96px;
+    cursor: pointer;
+
+}
+.CpuRigthArmBut {             /* Правая рука */
+    position: relative;
+    bottom: 230px;
+    left: -20px;
+    cursor: pointer;
+
+}
+.CpuLeftArmBut {             /* Левая рука */
+    position: relative;
+    bottom: 230px;
+    left: 120px;
+    cursor: pointer;
+
+}
+
+/*.FormCpu input {
+    z-index: 100;
+}
+/*-------------------------------------------------------------------------------------------------------*/
+/*---------------------Расположение кнопок Игрока --------------------------------------------- */
+.PlayerheadBut {         /* Голова */
+    position: relative;
+    bottom: 340px;
+    left: 140px;
+    cursor: pointer;
+}
+.PlayerBodyBut {           /* Туловище */
+    position: relative;
+    bottom: 226px;
+    left: 115px;
+    cursor: pointer;
+}
+.PlayerLegBut {             /* Ноги */
+    position: relative;
+    bottom: 114px;
+    left: 90px;
+    cursor: pointer;
+}
+/*========================================================================================*/
+
+/*-- окошко победы  */
+.img_win{
+    width: 400px;
+    height: 300px;
+    border-style: inset;
+    border-width: 3px;
+    position:absolute;
+    left: 1.5em;
+}
+.but_img_win{
+     position:absolute;
+     font-weight: 600;
+     width: 120px!important;
+     bottom: 2em;
+     left: 13em;
+     background: rgba(255,255,255,.2);
+     padding: 1.2em 2em;
+     border-radius: 15px!important;
+ }
+
+
+.txt_display_win{
+    width: 210px;
+    height: 60px;
+    position:absolute;
+    left: 7em;
+    bottom: 6em;
+    background: url("image/window_winer.jpg");
+
+    /*- РАМКА -*/
+    border: 10px solid transparent;
+    border-image: url("image/ramki/ramka4.jpg") 10 round;
+}
+.txt_display_win p{
+    font-size: 1.3em;
+    text-align: center;
+    color: blanchedalmond;
+    padding-top: 10px;
+}
+#window_win_gol, #window_win_gol2, #window_win_gol3, #window_win_gol4 {
+    display: none;
+    width:450px;
+    height:500px;
+    background: url("image/windoe_winer_2.jpg");
+    position:absolute;
+    margin-left: 360px;
+    top:50px;
+    border:solid 1px #333333;
+    padding:2px;
+}
+/*#window_win_gol2 {border-color: red!important;}
+#window_win_gol3 {border-color: blue!important;}
+#window_win_gol4 {border-color: yellow!important;}
+
+/*-------------------------- Окошко при поражении ----*/
+#my_window_lose{
+    display: none;
+    border-radius: 15px;
+    width:450px;
+    height:500px;
+    background: url("image/wind_lose2.jpg");
+    position:absolute;
+    margin-left: 360px;
+    top:50px;
+    border:solid 1px #333333;
+    padding:2px;
+    z-index: 200;
+}
+.img_lose{
+    width: 400px;
+    height: 300px;
+    border:solid 1px black;
+    border-radius: 15px;
+    position:absolute;
+    left: 1.6em;
+}
+.but_img_lose{
+    border-radius: 15px!important;
+    position:absolute;
+    bottom: 1.8em;
+    font-weight: 600;
+    width: 120px!important
+    left: 13em;
+    background: rgba(255,255,255,.2);
+    padding: 1.2em 2em;
+    color: red;
+}
+
+.txt_display_lose{
+    width: 210px;
+    height: 60px;
+    position:absolute;
+    left: 7.5em;
+    bottom: 7em;
+    background: url("image/wind_lose_txt.jpg");
+    text-align: center;
+
+    border: 9px solid transparent;
+    border-image: url("image/ramki/ramka4.jpg") 10 round;
+    border-radius: 15px;
+}
+.txt_display_lose p{
+    font-size: 1.3em;
+    text-align: center;
+    color: black;
+    padding-top: 10px;
+}
+
+#window_lose_time {
+
+    border-radius: 15px;
+    width:450px;
+    height:500px;
+    background: url("image/wind_lose2.jpg");
+    position:absolute;
+    margin-left: 360px;
+    top:50px;
+    border:solid 1px #333333;
+    padding:2px;
+    z-index: 200;
+}
+/*----------------------------------------------------------------------*/
+
+.text_background {
+    border: 13px groove black;
+    width: 1322px;
+    height: 450px;
+
+    top: 580px;
+    position: relative;
+    background: url("image/stone.jpg") repeat-x;
+    background-size: 1200px 800px;
+    opacity: 0.7;
+}
+
+/*---------------------------------------------------------------------------------------*/
+
+
+
+
+/*------------- Урон под Жизнями------------------------*/
+.playDmgDisplay{
+    /*border: 1px solid red;*/
+    height: 50px;
+    width: 110px;
+    position: absolute;
+    margin-left: 80px;
+    top: 140px;
+}
+.playDmgDisplay p{
+    color: red;
+    font-size: 20px;
+    margin: 10% 25%;
+}
+/*----------------CPU-----------------------------------*/
+.cpuDmgDisplay{
+    /*border: 1px solid red;*/
+    height: 50px;
+    width: 110px;
+    position: absolute;
+    margin-left: 975px;
+    top: 140px;
+}
+.cpuDmgDisplay p{
+    color: red;
+    font-size: 20px;
+    margin: 10% 25%;
+}
+
+/*============== Блок под жизнями =============================================*
+.playBLOCKDisplay{
+    border: 1px solid blue;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    margin-left: 100px;
+    top: 150px;
+}
+.playBLOCKDisplay p{
+    color: blue;
+    font-size: 24px;
+    margin: 10% 25%;
+}
+/*----------------CPU-----------------------------------*
+.cpuBLOCKDisplay{
+    border: 1px solid blue;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    margin-left: 999px;
+    top: 150px;
+}
+.cpuBLOCKDisplay p{
+    color: blue;
+    font-size: 24px;
+    margin: 10% 25%;
+}
+/*================================================================*/
+
+
+
+
+/*------------------------------------- Скелет */
+/*--- Задний фон Скелета ----*
+#skelbg{
+    background:black url("image/backScelet.jpg") no-repeat;
+   /* background-attachment: fixed; */ /* что бы задний фон не прокручивался*
+
+    background-size: 1350px 800px; /* изменения размера картинки. 1е значение - горизонт, 2е - вертикал*/
+   /* background-position: 20px 20px;  позиция фото, первое значение - горизонтальная позиция слева, вторая - вертикальная сверху*
+
+}
+
+
+/*---------------------------------------- Задний фон Голем*/
+
+.golemon {
+    background: url("image/bg_golem.jpg") no-repeat;
+    background-size: 1200px 800px;
+}
+
+
+/*------------------- Рамки ---------------------------------------------*/
+/*--- цвет рамки игрока на странице с Големом  --------------------------*
+.GolemImg{
+    border-color: darkgreen;
+}
+.PlayGolem {
+    border-color: darkgreen;
+}
+/*--- рамка фото Голема  --------------------------*
+.Golem {
+    border-color: darkgreen;
+}
+/*--- цвет рамки для дисплея в локации Голема -----*
+.BorderGolemPlay{
+    border-color: darkgreen;
+}
+/*--- цвет рамки для дисплея в локации Голема -----*
+.BorderGolem
+    border-color: darkgreen;
+}
+/*- цвет рамок характеристик*
+.BorderParamPlay {             /*- Игрока на странице голема *
+    border-color: darkgreen;
+}
+.BorderParamCpu {
+    border-color: darkgreen;
+}
+/*--- цвет рамки для дисплея в локации Голема -----*
+.BorderTextGolem {
+    border-color: darkgreen;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+

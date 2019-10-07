@@ -1,0 +1,344 @@
+html { background-color: black}
+
+
+.mapCenterBlock{
+    background: url("image/map-lab/bg_map.jpg") no-repeat;
+    border: 10px ridge darkgray;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: 400px;
+    height: 500px;
+    /*opacity: 0;*/
+}
+
+/*-- картинки лабиринта --*/
+.mapCenterBlock img {
+     margin: -2px;
+    position: relative;
+    color: darkgoldenrod;
+}
+
+
+
+.arrow {
+   position: relative;
+    top: 85px;
+    left: -150px;
+}
+
+/*----- Моб на карте ----*/
+.map-mob {
+   border: 1px solid red;
+    position: relative;
+    top: 327px;
+    left: -275px;
+
+}
+
+.map-mob2 {
+    border: 1px solid red;
+    position: relative;
+    top: 11px;
+    left: -87px;
+
+}
+.map-mob3 {
+    border: 1px solid red;
+    position: relative;
+    top: -105px;
+    left: -146px;
+
+}
+.map-mob4 {
+    border: 1px solid red;
+    position: relative;
+    top: -145px;
+    left: -50px;
+
+}
+
+
+
+/*---- расположение блоков картинок ---*/
+
+.map-start {
+    top: 445px;
+    left: 110px;
+}
+.map-s01 {
+    /*border: 1px solid red;*/
+     top: 425px;
+     left: 55px;
+    /*left: 110px;*/
+ }
+.map-s02 {
+    top: 405px;
+    /*left: 110px;*/
+}
+.map-s03 {
+    top: 385px;
+    left: -55px;
+}
+.map-s04 {
+    top: 385px;
+    left: -130px;
+}
+.map-s05 {
+    top: 365px;
+    left: -185px;
+}
+.map-s06 {
+    top: 345px;
+    left: -240px;
+}
+.map-s006 {
+    top: 180px;
+    left: 126px;
+}
+.map-s07 {
+    top: 270px;
+    left: 90px;
+}
+.map-s08 {
+    top: 250px;
+    left: 35px;
+}
+.map-s09 {
+    top: 230px;
+    left: -20px;
+}
+.map-s10 {
+    top: 230px;
+    left: -94px;
+}
+.map-s11 {
+    top: 230px;
+    left: -133px;
+}
+.map-s12 {
+    top: 229px;
+    left: -170px;
+}
+.map-s13 {
+    top: 229px;
+    left: -209px;
+}
+.map-s14 {
+    top: 248px;
+    left: -190px;
+}
+.map-s15 {
+    top: 266px;
+    left: -245px;
+}
+.map-s16 {
+     top: 266px;
+     left: -319px;
+ }
+.map-s17 {
+    top: 266px;
+    left: -356px;
+}
+.map-s18 {
+    top: 194px;
+    left: 15px;
+}
+.map-s19 {
+     top: 135px;
+     left: -42px;
+ }
+.map-s20 {
+    top: 135px;
+    left: -42px;
+}
+.map-s21 {
+    top: 136px;
+    left: -43px;
+}
+.map-s22 {
+    top: 136px;
+    left: -42px;
+}
+.map-s23 {
+    top: 136px;
+    left: -41px;
+}
+.map-s25 {
+     top: 98px;
+     left: -173px;
+ }
+.map-s26 {
+    top: 97px;
+    left: -228px;
+}
+.map-s27 {
+    top: 76px;
+    left: -283px;
+}
+.map-s28 {
+    top: 76px;
+    left: -282px;
+}
+.map-s29 {
+    top: 77px;
+    left: -282px;
+}
+.map-s30 {
+    top: 22px;
+    left: 106px;
+}
+.map-s30_2 {
+    top: 1px;
+    left: 50px;
+}
+.map-s31_up {
+    top: -33px;
+    left: -7px;
+}
+.map-s31_down {
+    top: 40px;
+    left: -48px;
+}
+.map-s32 {
+    top: 3px;
+    left: -50px;
+}
+.map-s33 {
+    top: 3px;
+    left: -69px;
+}
+.map-s35 {
+    top: 40px;
+    left: -124px;
+}
+.map-s36 {
+    top: 40px;
+    left: -124px;
+}
+.map-s37 {
+    top: 40px;
+    left: -124px;
+}
+.map-s38 {
+    top: 40px;
+    left: -124px;
+}
+.map-s39 {
+    top: 40px;
+    left: -141px;
+}
+.map-s42 {
+    top: 4px;
+    left: 126px;
+}
+.map-s43 {
+    top: 23px;
+    left: 71px;
+}
+.map-s44 {
+    top: 61px;
+    left: 16px;
+}
+.map-s45 {
+    top: 61px;
+    left: -2px;
+}
+.map-s9_46 {
+     top: 61px;
+     left: -40px;
+ }
+.map-s44_43 {
+    top: -15px;
+    left: -77px;
+}
+.map-s37_36 {
+    top: -15px;
+    left: -172px;
+}
+.map-s30_29 {
+    top: -34px;
+    left: -248px;
+}
+.map-s47 {
+    top: 61px;
+    left: -135px;
+}
+.map-s48 {
+    top: 61px;
+    left: -135px;
+}
+.map-s49 {
+    top: 61px;
+    left: -135px;
+}
+.map-s50 {
+    top: 6px;
+    left: 222px;
+}
+.map-s48_52 {
+    top: 26px;
+    left: 108px;
+}
+.map-s53 {
+    top: 65px;
+    left: 53px;
+}
+.map-s54 {
+    top: 44px;
+    left: 51px;
+}
+.map-s55 {
+    top: 66px;
+    left: 12px;
+}
+.map-s56r {
+    top: 89px;
+    left: -6px;
+}
+.map-s56d {
+    top: 103px;
+    left: -26px;
+}
+.map-s57 {
+    top: 86px;
+    left: -7px;
+}
+.map-s58 {
+    top: 86px;
+    left: -26px;
+}
+.map-s60 {
+    top: 30px;
+    left: 187px;
+}
+.map-s60d {
+    top: 48px;
+    left: 132px;
+}
+.map-s61 {
+    top: 49px;
+    left: 74px;
+}
+.map-s62 {
+    top: 49px;
+    left: 36px;
+}
+.map-s3_64 {
+    top: 163px;
+    left: -152px;
+}
+.map-s61_60 {
+    top: 14px;
+    left: 36px;
+}
+.map-s54_53 {
+    top: -47px;
+    left: 12px;
+}
+.map-s47_45 {
+    top: -47px;
+    left: -81px;
+}
+
+

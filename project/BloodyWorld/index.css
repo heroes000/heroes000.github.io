@@ -1,0 +1,89 @@
+html{
+    font-size: 62.5%;
+    background: url("image/bgImageGame.jpg") no-repeat;
+    background-color: black;
+    background-size: 1200px 950px;
+    max-width: 1200px;
+   /* border: groove 6px black;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+.Body {
+    background-color: rgba(0,0,0, .6);
+    /*border: 2px solid darkred;*/
+    border-radius: 20px;
+    max-width: 800px;
+
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    /*  box-shadow: 0 0 15px 5px rgba(44,82,100,.75) */
+
+}
+/*------------ Кнопка в игру -----------------------------*/
+#ButstarGame{
+    width: 120px;
+    height: 80px;
+    margin: 60px 0 0 320px;
+    border-radius: 15px;
+    background-image: radial-gradient( white 10%, darkred);
+    /*  box-shadow: 0 0 15px 5px rgba(44,82,100,.75) */
+    cursor: pointer;
+}
+#ButstarGame p{
+    font-size: 16px;
+    font-family: 'Pattaya', sans-serif, cursive;
+    font-weight: 600;
+}
+/*-----------------------------------------*/
+
+.GameName{
+    /* border: 1px solid white; */
+    width: 460px;
+    height: 80px;
+    padding: 0 0 0 150px;
+}
+
+
+.GameText{
+    background-color: rgba(0,0,0, .6);
+    border-radius: 15px;
+    width: 550px;
+    height: auto;
+    max-height: 800px;
+    margin: 50px auto 50px auto;
+}
+.GameText p{
+    font-family: 'Pattaya', sans-serif, cursive;
+    font-size: 1.5em;
+    color: darkgray;
+
+    line-height: 130%;  /* межстрочный интервал */
+    letter-spacing: 2px;  /* интервал букв */
+    word-spacing: 3px;  /* межсловный интервал */
+    text-indent: 40px; /* Отступ первой строки */
+
+    padding: 30px 40px;
+}
+h2{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: -10px;
+    color: chocolate;
+}
+
+/*--------- Налаживание заголовка друг на друга -------*/
+h1 {
+    color: white;
+    font-size: 6em;
+    text-shadow: 4px 3px 6px rgba(0,0,0,.8);
+
+}
+h1 strong{
+    color: red;
+    font-size: 90px;
+    margin-right: -0.5em;
+    margin-left: 30px;
+}
+/*==========================================================*/

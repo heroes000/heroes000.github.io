@@ -1,0 +1,155 @@
+/*Стили для верхнего слоя и всплывающего окна*/
+.infoBut {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 96px;
+    height: 35px;
+    background: radial-gradient( darkred, black);
+    cursor: pointer;
+}
+.infoBut p {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+}
+.infoBut:hover{
+    background: radial-gradient( darkred 30%, black);
+    transform: scale(1.05);
+}
+
+
+/*--- Главный блок --*/
+#infoGame {
+    width:100%;
+    height:100%;
+    background: rgba(40,40,40,.88);
+    margin:0 auto;
+    position:absolute;
+    top: 0;
+    left:0;
+}
+
+/*------ ОБЩИЕ НАСТРОЙКИ ------------------------------------------------*/
+/*------ текст блоков обьяснения --*/
+.txt p{
+    font-size: 14px;
+    color: white;
+    font-family:  sans-serif, cursive;
+    line-height: 70%;
+    padding: 5px 10px;
+}
+/*------------------------------------------------*/
+
+/*------- Кнопка -----*/
+.buttoncss button:hover { cursor: pointer;}
+/*------------------------------------------------*/
+
+
+
+
+
+
+/*---- Первый блок обьяснения ---------------------------------------------*/
+.infoGameBlock1 {
+    border: 3px solid white;
+    position: absolute;
+    z-index: 100;
+    background: black;
+    left: 80px;
+    top: 150px;
+}
+.infoGameBlock1 button {
+    position: relative;
+    float: right;
+    padding: 4px;
+    right: 10px;
+    top: -5px;
+    width: 60px;
+    height: 30px;
+}
+/*----------------------------------------------------------------*/
+
+/*---- Второй блок -------------*/
+.infoGameBlock2 {
+    display: none;
+    border: 3px solid white;
+    position: absolute;
+    z-index: 100;
+    background: black;
+    left: 350px;
+    top: 150px;
+}
+.infoGameBlock2 button {
+    position: relative;
+    float: right;
+    padding: 4px;
+    right: 10px;
+    top: -5px;
+    width: 60px;
+    height: 30px;
+}
+/*----------------------------------------------------------------*/
+
+/*---- Третий блок -------------*/
+.infoGameBlock3 {
+    display: none;
+    border: 3px solid white;
+    position: absolute;
+    z-index: 100;
+    background: black;
+    left: 410px;
+    top: 300px;
+}
+.infoGameBlock3 button {
+    position: relative;
+    float: right;
+    padding: 4px;
+    right: 10px;
+    top: -1px;
+    width: 55px;
+    height: 30px;
+}
+/*----------------------------------------------------------------*/
+
+/*---- Четвертый блок -------------*/
+.infoGameBlock4 {
+    display: none;
+    border: 3px solid white;
+    position: absolute;
+    z-index: 100;
+    background: black;
+    left: 410px;
+    top: 260px;
+}
+.infoGameBlock4 button {
+    position: relative;
+    float: right;
+    padding: 4px;
+    right: 10px;
+    top: -5px;
+    width: 60px;
+    height: 30px;
+}
+/*----------------------------------------------------------------*/
+
+/*---- Пятый блок -------------*/
+.infoGameBlock5 {
+    display: none;
+    border: 3px solid white;
+    position: absolute;
+    z-index: 100;
+    background: black;
+    left: 310px;
+    top: 60px;
+}
+.infoGameBlock5 button {
+    position: relative;
+    float: right;
+    padding: 4px;
+    right: 30px;
+    top: -5px;
+    width: 70px;
+    height: 30px;
+}
+/*----------------------------------------------------------------*/
